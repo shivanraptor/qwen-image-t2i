@@ -9,18 +9,28 @@ Qwen-Image Text-to-Image Generation with Low Memory Requirements
 
 # Installation
 1. Clone this repository: `git clone https://github.com/shivanraptor/qwen-image-t2i.git`
-2. Create a virtual environment, preferably using Python 3.10 as the environment
-3. Activate your virtual environment
+2. Create a virtual environment, preferably using Python 3.10 as the environment: `python -m venv t2ivenv`
+3. Activate your virtual environment: `. t2ivenv/bin/activate`
 4. Install the required packages via pip: `pip install -r requirements.txt`
 5. (Optional) Download your favorite LoRA and put it in the `lora/` folder
 6. Edit the `config.cfg` for Prompt and Aspect Ratio (see config parameters details below), optionally set the LoRA
 7. Execute the command: `python qwen.py config.cfg`
 8. You will find the generated image in the `output/` folder
+9. Deactivate the virtual environment afterwards: `deactivate`
 
 Enjoy!
 
 # Configurable Parameters
+
+Sample config file content:
+```
+prompt = "A Japanese young lady with long black hair, 20-year-old, wearing school uniform, casually leaning to a traffic light, in an urban Hong Kong setting. Her pose and expression convey confidence and comfort. photorealistic, Ultra HD, 4K, cinematic composition"
+aspect_ratio = "9:16"
+lora = ""
+```
+
 `prompt`: Describe your image as detailed as possible.
+
 `aspect_ratio`: There are several preset aspect ratios available: '1:1', '16:9', '9:16', '4:3', '3:4', '3:2', '2:3'
 
 | aspect_ratio | width | height |
