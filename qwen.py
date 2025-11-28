@@ -6,7 +6,7 @@ os.environ['PYTORCH_CUDA_ALLOC_CONF'] = 'expandable_segments:True'
 
 # Suppress Warnings (if any)
 import logging
-logging.getLogger().setLevel(logging.ERROR)
+logger = logging.getLogger().setLevel(logging.ERROR)
 
 from diffusers import AutoModel, DiffusionPipeline
 import torch
